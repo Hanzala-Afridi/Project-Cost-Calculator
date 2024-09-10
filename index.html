@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Cost Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  
+  
+  
+ 
+</head>
+<body>
+
+  <div class="container">
+    <h2>Project Cost Calculator</h2>
+
+    <form id="projectCostForm">
+      
+      <!-- 1. Project Type -->
+      <div class="form-group">
+        <label for="projectType">Project Type:</label>
+        <select id="projectType" name="projectType">
+          <option value="website-basic">Website (Basic)</option>
+          <option value="website-ecommerce">Website (E-commerce)</option>
+          <option value="website-custom">Website (Custom)</option>
+          <option value="app-mobile">App (Mobile)</option>
+          <option value="app-web">App (Web)</option>
+          <option value="software-development">Software Development</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <!-- 2. Project Scope -->
+      <div class="form-group">
+        <label for="numPages">Number of Pages:</label>
+        <input type="number" id="numPages" name="numPages" min="1" placeholder="Enter the number of pages">
+      </div>
+
+      <div class="form-group">
+        <label for="features">Features:</label>
+        <textarea id="features" name="features" placeholder="e.g., Payment gateway, Social media integration"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="designComplexity">Design Complexity:</label>
+        <select id="designComplexity" name="designComplexity">
+          <option value="simple">Simple</option>
+          <option value="moderate">Moderate</option>
+          <option value="complex">Complex</option>
+        </select>
+      </div>
+
+      <!-- 3. Target Platform -->
+      <div class="form-group">
+        <label for="targetPlatform">Target Platform:</label>
+        <select id="targetPlatform" name="targetPlatform">
+          <option value="desktop">Desktop</option>
+          <option value="mobile">Mobile (iOS, Android)</option>
+          <option value="both">Both</option>
+        </select>
+      </div>
+
+      <!-- 4. Development Timeline -->
+      <div class="form-group">
+        <label for="devTimeline">Estimated Project Duration (weeks/months):</label>
+        <input type="text" id="devTimeline" name="devTimeline" placeholder="Enter project duration">
+      </div>
+
+      <div class="form-group">
+        <label for="deadline">Deadline (if applicable):</label>
+        <input type="date" id="deadline" name="deadline">
+      </div>
+
+      <!-- 5. Design Preferences -->
+      <div class="form-group">
+        <label for="existingDesign">Existing Design (Provide URL):</label>
+        <input type="url" id="existingDesign" name="existingDesign" placeholder="Enter URL">
+      </div>
+
+      <div class="form-group">
+        <label for="designStyle">Design from Scratch (Specify style preferences):</label>
+        <textarea id="designStyle" name="designStyle" placeholder="e.g., Minimalistic, Bold, Professional"></textarea>
+      </div>
+
+      <!-- 6. WordPress-Specific Fields -->
+      <h3>WordPress-Specific Fields</h3>
+
+      <!-- (a) WordPress Theme -->
+      <div class="form-group">
+        <label for="wpTheme">WordPress Theme:</label>
+        <select id="wpTheme" name="wpTheme">
+          <option value="custom">Custom Theme</option>
+          <option value="pre-built">Pre-built Theme</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="numPlugins">Number of Required Plugins:</label>
+        <input type="number" id="numPlugins" name="numPlugins" min="0" placeholder="Enter number of plugins">
+      </div>
+
+      <!-- (b) Customizations -->
+      <div class="form-group">
+        <label for="customizationLevel">Level of Customization:</label>
+        <select id="customizationLevel" name="customizationLevel">
+          <option value="minor">Minor Tweaks</option>
+          <option value="major">Major Changes</option>
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit">Calculate Cost</button>
+    </form>
+  </div>
+
+  <script src="javascript.js"></script>
+  
+
+</body>
+</html>
